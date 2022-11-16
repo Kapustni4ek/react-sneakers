@@ -1,15 +1,17 @@
+import styles from './Drawer.module.scss';
+
 function Drawer() {
   return (
     <div className="drawer">
-      <div style={{ display: "none" }} className="opacityBlock">
-        <div className="outBlock">
+      <div style={{ display: "none" }} className={styles.opacityBlock}>
+        <div className={styles.outBlock}>
           <div className="topCart d-flex justify-between mb-20">
             <h3>Корзина</h3>
             <img className="cu-p" src="/img/unbuy.svg" alt="unbuy" />
           </div>
 
-          <div className="cartItems">
-            <div className="cardItem d-flex justify-berween align-center">
+          <div className={styles.cartItems}>
+            <div className={styles.cardItem}>
               <img
                 className="mr-20"
                 width={80}
@@ -24,7 +26,7 @@ function Drawer() {
               <img className="cu-p ml-20" src="/img/unbuy.svg" alt="unbuy" />
             </div>
 
-            <div className="cardItem d-flex justify-berween align-center">
+            <div className={styles.cardItem}>
               <img
                 className="mr-20"
                 width={80}
@@ -39,7 +41,7 @@ function Drawer() {
               <img className="cu-p ml-20" src="/img/unbuy.svg" alt="unbuy" />
             </div>
 
-            <div className="cardItem d-flex justify-berween align-center">
+            <div className={styles.cardItem}>
               <img
                 className="mr-20"
                 width={80}
@@ -55,7 +57,7 @@ function Drawer() {
             </div>
           </div>
 
-          <div className="totalCartBlock">
+          <div className={styles.totalCartBlock}>
             <ul>
               <li className="d-flex justify-between ">
                 <span>Итого:</span>

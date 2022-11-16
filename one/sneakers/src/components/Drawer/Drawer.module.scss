@@ -1,0 +1,90 @@
+.opacityBlock{
+    position: absolute;
+    z-index: 1 ;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .outBlock{
+  position: absolute;
+  width: 430px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 0 40px;
+  display: flex  !important; 
+  flex-direction: column  !important; 
+    h3{
+    font-weight: 700;
+    font-size: 24px;
+    }
+  }
+  .cartItems{
+    overflow:auto;
+    margin-bottom: 30px;
+  }
+  .cardItem{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    p{
+      margin: 5px 0;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    b{
+      font-size: 13px;
+    }
+    border: 1px solid #F3F3F3;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .totalCartBlock{
+    li{
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      div{
+        flex: 1;
+        height: 1px;
+        position: relative;
+        border-bottom: 1px dashed #DFDFDF;
+        margin: 0 7px;
+        top: -4px;
+      }
+    }
+    button{
+      position: relative;
+      margin-top: 10px;
+      width: 100%;
+      height: 55px;
+      background: #9DD558;
+      border-radius: 18px;
+      border: 0px;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0,7s ease-in-out;
+      &:hover{
+        background-color: lighten($color: #9DD558, $amount: 5);
+        img{
+          right: 25px;
+        }
+      }
+      &:active{
+        background-color: darken($color: #9DD558, $amount: 3)
+      }
+  
+      img{
+        right: 30px;
+        position: absolute;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    margin-top: auto;
+    padding-bottom: 30px;
+  }
