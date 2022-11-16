@@ -1,13 +1,13 @@
 import styles from './Drawer.module.scss';
 
-function Drawer() {
+function Drawer(props) {
   return (
     <div className="drawer">
-      <div style={{ display: "none" }} className={styles.opacityBlock}>
+      <div className={styles.opacityBlock}>
         <div className={styles.outBlock}>
           <div className="topCart d-flex justify-between mb-20">
             <h3>Корзина</h3>
-            <img className="cu-p" src="/img/unbuy.svg" alt="unbuy" />
+            <img onClick={props.onClose} className="cu-p" src="/img/unbuy.svg" alt="unbuy" />
           </div>
 
           <div className={styles.cartItems}>
