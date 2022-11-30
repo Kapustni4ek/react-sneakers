@@ -50,6 +50,7 @@ header{
   border: 1px solid #F3F3F3;
   border-radius: 15px;
   padding: 10px;
+  position: relative;
   input{
     border: 0px;
     padding: 0 10px;
@@ -57,4 +58,12 @@ header{
     width: 200px;
     color: #464646;
   }
+}
+
+.searchdel{
+  position: absolute;
+  margin-top: -1px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
 }

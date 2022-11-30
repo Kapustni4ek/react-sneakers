@@ -1,60 +1,34 @@
 import styles from './Drawer.module.scss';
 
-function Drawer(props) {
+function Drawer({onClose, items = [] }) {
   return (
     <div className="drawer">
       <div className={styles.opacityBlock}>
         <div className={styles.outBlock}>
           <div className="topCart d-flex justify-between mb-20">
             <h3>Корзина</h3>
-            <img onClick={props.onClose} className="cu-p" src="/img/unbuy.svg" alt="unbuy" />
+            <img onClick={onClose} className="cu-p" src="/img/unbuy.svg" alt="unbuy" />
           </div>
 
           <div className={styles.cartItems}>
-            <div className={styles.cardItem}>
-              <img
-                className="mr-20"
-                width={80}
-                height={70}
-                src="/img/image6.jpg"
-                alt="sneaker"
-              />
-              <div>
-                <p>Мужские Кроссовки Nike Air Max 270</p>
-                <b>12 999 руб.</b>
-              </div>
-              <img className="cu-p ml-20" src="/img/unbuy.svg" alt="unbuy" />
-            </div>
 
-            <div className={styles.cardItem}>
+          {items.map((obj) => (
+              <div className={styles.cardItem}>
               <img
                 className="mr-20"
                 width={80}
                 height={70}
-                src="/img/image7.jpg"
+                src={obj.imageUrl}
                 alt="sneaker"
               />
               <div>
-                <p>Мужские Кроссовки Nike Air Max 270</p>
-                <b>12 999 руб.</b>
+                <p>{obj.title}</p>
+                <b>{obj.price} руб.</b>
               </div>
               <img className="cu-p ml-20" src="/img/unbuy.svg" alt="unbuy" />
             </div>
+            ))}
 
-            <div className={styles.cardItem}>
-              <img
-                className="mr-20"
-                width={80}
-                height={70}
-                src="/img/image7.jpg"
-                alt="sneaker"
-              />
-              <div>
-                <p>Мужские Кроссовки Nike Air Max 270</p>
-                <b>12 999 руб.</b>
-              </div>
-              <img className="cu-p ml-20" src="/img/unbuy.svg" alt="unbuy" />
-            </div>
           </div>
 
           <div className={styles.totalCartBlock}>
